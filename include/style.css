@@ -1,0 +1,116 @@
+html, body {
+  width: 100vw;
+  padding: 0;
+  margin: 0;
+  height: 100vh;
+  font-size: 16px;
+  color: #d8d4f2;
+}
+
+body {
+  background: #a29587;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body .topStuff {
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body .topStuff .nav {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+body .topStuff .nav div {
+  position: absolute;
+  width: 50em;
+  height: 2em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  left: -20em;
+  top: 5em;
+}
+
+body .topStuff .nav div:hover {
+  -webkit-transform: scale(1.1) rotate(-45deg);
+          transform: scale(1.1) rotate(-45deg);
+  cursor: pointer;
+}
+
+body .topStuff .nav div:nth-child(1) {
+  margin-top: 0;
+  background: #332e3c;
+}
+
+body .topStuff .nav div:nth-child(2) {
+  margin-top: 2em;
+  margin-left: 2em;
+  background: #846c5b;
+}
+
+body .topStuff .ImportantMessagesDiv {
+  margin-top: 1em;
+  margin-right: 1em;
+  -webkit-box-flex: 3;
+      -ms-flex: 3;
+          flex: 3;
+  background: #a29587;
+  -webkit-box-shadow: 2px 2px 5px 5px #846c5b;
+          box-shadow: 2px 2px 5px 5px #846c5b;
+  border-radius: 1em;
+}
+
+body .content {
+  border-radius: 1em;
+  margin: 1em;
+  -webkit-box-shadow: 2px 2px 5px 5px #332e3c;
+          box-shadow: 2px 2px 5px 5px #332e3c;
+  -webkit-box-flex: 5;
+      -ms-flex: 5;
+          flex: 5;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  overflow-y: scroll;
+}
+
+body .content .messages {
+  padding: .5em;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  color: #d8d4f2;
+  background: #846c5b;
+}
+
+body .content .messages:nth-child(2n) {
+  background: #332e3c;
+}
+/*# sourceMappingURL=style.css.map */

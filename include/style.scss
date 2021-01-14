@@ -1,0 +1,112 @@
+
+$main:#a29587;
+$secound:#332e3c;
+$secound1:#846c5b;
+$font:#d8d4f2;
+
+html,body
+{
+    width: 100vw;
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+
+    font-size: 16px;
+    color:$font;
+}
+
+body
+{
+    background:$main;
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+    flex-direction: column;
+    .topStuff
+    {
+        flex:2;
+        display:flex;
+        .nav
+        {
+
+            flex:1;
+            $sizeNav:10em;
+
+            div
+            {
+                position: absolute;
+                width: $sizeNav*5;
+                height: $sizeNav/5;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transform: rotate(-45deg);
+                left:-2*$sizeNav;
+                top:$sizeNav/2;
+                
+                &:hover
+                {
+                    transform: scale(1.1) rotate(-45deg);
+                    cursor: pointer;
+                }
+            }
+            div:nth-child(1)
+            {
+                margin-top:0;
+                background:$secound;
+                
+            }
+            div:nth-child(2)
+            {
+                margin-top: $sizeNav/5;
+                margin-left: $sizeNav/5;
+                background:$secound1;
+                
+            }
+
+
+
+
+        }
+        .ImportantMessagesDiv
+        {
+            margin-top: 1em;
+            margin-right: 1em;
+            flex:3;
+            background: $main;
+            box-shadow: 2px 2px 5px 5px $secound1;
+            border-radius: 1em;
+            .ImportantMessages
+            {
+                
+            }
+        }
+    }
+
+    .content
+    {
+        border-radius: 1em;
+        margin: 1em;
+        box-shadow: 2px 2px 5px 5px $secound;
+        flex:5;
+        display: flex;
+        flex-direction: column;
+        
+        overflow-y:scroll;
+        
+        .messages
+        {
+            padding: .5em;
+            flex:1;
+            color: $font;
+            background: $secound1;
+
+            &:nth-child(2n)
+        {
+            background:$secound;
+        }
+
+        }
+        
+    }
+}
