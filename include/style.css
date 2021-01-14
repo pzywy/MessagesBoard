@@ -106,28 +106,89 @@ body .content {
 }
 
 body .content .messages {
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
   padding: .5em;
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
   color: #332e3c;
   background: #c4b2bc;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .content .messages * {
+  height: 100%;
+  margin-right: 1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .content .messages .category {
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+}
+
+body .content .messages .MessagText {
+  -webkit-box-flex: 17;
+      -ms-flex: 17;
+          flex: 17;
+}
+
+body .content .messages .delete {
+  -ms-grid-column-align: center;
+      justify-self: center;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  border-radius: 1em;
+  height: 2em;
+  width: 2em;
+}
+
+body .content .messages .delete:hover {
+  background-color: red;
+  color: #d8d4f2;
+}
+
+body .content .messages .MessageId {
+  display: none;
+}
+
+body .content .messages :nth-child(2n+1) {
+  text-align: center;
+  border: #332e3c dotted 1px;
 }
 
 body .content .messages:nth-child(2n) {
   background: #a29587;
 }
 
-body .content .messages::after {
-  content: 'X';
-  float: right;
-  font-weight: bold;
-  color: red;
-  font-size: 1em;
+body .content .messages:hover {
+  border: #332e3c dotted 2px;
+  cursor: pointer;
 }
 
-body .content .messages::after:hover {
-  cursor: pointer;
+body .content .clickedMessage {
+  font-size: 2em !important;
 }
 
 body .scroll {
@@ -207,7 +268,7 @@ body .modalWindow .window div form .selectPaintingBgrd {
   background-size: 90%;
 }
 
-body .modalWindow .window div form :last-child {
+body .modalWindow .window div form [type='submit'] {
   color: #d8d4f2;
   background: #332e3c;
   border-radius: 10em;
@@ -216,7 +277,7 @@ body .modalWindow .window div form :last-child {
           box-shadow: 3px 3px 5px 5px #332e3c;
 }
 
-body .modalWindow .window div form :last-child:hover {
+body .modalWindow .window div form [type='submit']:hover {
   cursor: pointer;
 }
 

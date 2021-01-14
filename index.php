@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Wiadomosci</title>
     <link rel="stylesheet" href="include/style.css">
 </head>
 <body>
@@ -11,60 +11,45 @@
     <div class="topStuff">
         <div class="nav">
             <div class="navPart newMessage">Nowa Wiadomosc</div>
-            <div class="navPart">Wiadomosci</div>
+            <div class="navPart" onClick="window.location.reload()">Wiadomosci</div>
         </div>
         <div class="ImportantMessagesDiv scroll">
-            <div class="ImportantMessages">lollllllllllllllllllllllllllll </div>
-            <div class="ImportantMessages">lollllllllllllllllllllllllllll</div>
-            <div class="ImportantMessages">lollllllllllllllllllllllllllll</div>
-            <div class="ImportantMessages">lollllllllllllllllllllllllllll</div>
-            <div class="ImportantMessages">lollllllllllllllllllllllllllll</div>
-            <div class="ImportantMessages">lollllllllllllllllllllllllllll</div>
-            <div class="ImportantMessages">lollllllllllllllllllllllllllll</div>
-            <div class="ImportantMessages">lollllllllllllllllllllllllllll</div>
-            <div class="ImportantMessages">lollllllllllllllllllllllllllll</div>
-            <div class="ImportantMessages">lollllllllllllllllllllllllllll</div>
+            <div class="ImportantMessages">Najważniejsze informację na górze w widocznym miejscu, coś tam coś tam.</div>
+            <div class="ImportantMessages">Jedną z ważniejszych informacji na dziś jest to, że należy pamiętać
+                o tym aby patrzeć na te wiadomości. Oprócz tego należy sprawdzić mniej ważne wiadomości znajdujące
+                się na dole strony.
+            </div>
+            
+            <?php 
+            for($i=0;$i<15; $i++)
+            {?> 
+                <div class="ImportantMessages">Bardzo bardzo bardzo bardzo bardzo bardzo bardzo wiadomość</div>
+            <?php }?>
         </div>
     </div>
     <div class="content scroll">
-        <div class="messages">text inside messages</div>
-        <div class="messages">text inside messages</div>
-        <div class="messages">text inside messages</div>
-        <div class="messages">text inside messages</div>
-        <div class="messages">text inside messages</div>
-        <div class="messages">text inside messages</div>
-        <div class="messages">text inside messages</div>
-        <div class="messages">text inside messages</div>
-        <div class="messages">text inside messages</div>
-        <div class="messages">text inside messages</div>
-        <div class="messages">text inside messages</div>
-        <div class="messages">text inside messages</div>
-        <div class="messages">text inside messages</div>
-        <div class="messages">text inside messages</div>
-        <div class="messages">text inside messages</div>
-        <div class="messages">text inside messages</div>
-        <div class="messages">text inside messages</div>
-        <div class="messages">text inside messages</div>
-        <div class="messages">text inside messages</div>
-        <div class="messages">text inside messages</div>
-        <div class="messages">text inside messages</div>
-        <div class="messages">text inside messages</div>
-        <div class="messages">text inside messages</div>
-        <div class="messages">text inside messages</div>
-        <div class="messages">text inside messages</div>
-        <div class="messages">text inside messages</div>
-        <div class="messages">text inside messages</div>
-        <div class="messages">text inside messages</div>
-        <div class="messages">text inside messages</div>
-        <div class="messages">text inside messages</div>
-        <div class="messages">text inside messages</div>
-        <div class="messages">text inside messages</div>
-        <div class="messages">text inside messages</div>
-        <div class="messages">text inside messages</div>
+        
 
+    <?php 
+    for($i=0;$i<25; $i++)
+    {?> 
+
+        <div class="messages">
+            <div class="category">Ogólne</div>
+            <div class="MessagText">mniej ważne wiadomości
+            mniej ważne wiadomościmniej ważne wiadomościmniej ważne wiadomości mniej ważne wiadomościmniej ważne wiadomości
+            mniej ważne wiadomościmniej ważne wiadomościmniej ważne wiadomościmniej ważne wiadomościmniej ważne wiadomościmniej 
+            ważne wiadomości
+            </div>
+            <div class="delete">Usuń</div>
+            <div class="MessageId">32</div>
+        </div>     
+
+     <?php }?>
+        
     </div>
 
-    <div class="modalWindow">
+    <div class="modalWindow hide">
         <div class="window">
             <div class="top">
                 <p>Dodaj Nową Wiadomość</p>
@@ -75,7 +60,7 @@
                     <textarea class="scroll" name="message"></textarea>
 
                     <label for="category">Kategoria</label>
-                    <select>
+                    <select id="selectCategory">
                         <option value="Ogolne">Ogólne</option>
                         <option value="Wazne">Ważne</option>
                         <option value="Recepcja">Recepcja</option>
