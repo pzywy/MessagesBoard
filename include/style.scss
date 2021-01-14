@@ -269,3 +269,35 @@ body
     
 
 }
+
+$breakpoint-tablet: 1000px;
+@media (max-width: $breakpoint-tablet) {
+  
+    body
+    {
+        overflow-y: scroll;
+        height: unset;
+
+        .topStuff
+        {
+            height: 100vh;
+            flex-direction: column;
+            .ImportantMessagesDiv 
+            {
+                
+                height: 10vh;
+                width: 90vw;
+                margin:auto;
+                margin-top: 20em;
+            }
+            
+        }
+        .content 
+            {
+                margin:auto;
+                height: 60vh;
+                width: 80vw;
+                margin-top: 5em;
+            }
+    }
+}
