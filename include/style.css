@@ -62,13 +62,13 @@ body .topStuff .nav div:hover {
 
 body .topStuff .nav div:nth-child(1) {
   margin-top: 0;
-  background: #332e3c;
+  background: #846c5b;
 }
 
 body .topStuff .nav div:nth-child(2) {
   margin-top: 2em;
   margin-left: 2em;
-  background: #846c5b;
+  background: #332e3c;
 }
 
 body .topStuff .ImportantMessagesDiv {
@@ -78,13 +78,18 @@ body .topStuff .ImportantMessagesDiv {
       -ms-flex: 3;
           flex: 3;
   background: #a29587;
-  -webkit-box-shadow: 2px 2px 5px 5px #846c5b;
-          box-shadow: 2px 2px 5px 5px #846c5b;
-  border-radius: 1em;
+  height: 20em;
+}
+
+body .topStuff .ImportantMessagesDiv .ImportantMessages {
+  background: #332e3c;
+  text-align: center;
+  font-size: 2em;
+  border: #846c5b solid 0.2em;
+  border-radius: .3em;
 }
 
 body .content {
-  border-radius: 1em;
   margin: 1em;
   -webkit-box-shadow: 2px 2px 5px 5px #332e3c;
           box-shadow: 2px 2px 5px 5px #332e3c;
@@ -98,7 +103,6 @@ body .content {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  overflow-y: scroll;
 }
 
 body .content .messages {
@@ -106,11 +110,117 @@ body .content .messages {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  color: #d8d4f2;
-  background: #846c5b;
+  color: #332e3c;
+  background: #c4b2bc;
 }
 
 body .content .messages:nth-child(2n) {
+  background: #a29587;
+}
+
+body .content .messages::after {
+  content: 'X';
+  float: right;
+  font-weight: bold;
+  color: red;
+  font-size: 1em;
+}
+
+body .content .messages::after:hover {
+  cursor: pointer;
+}
+
+body .scroll {
+  overflow-y: scroll;
+}
+
+body .scroll::-webkit-scrollbar {
+  width: .5em;
+}
+
+body .scroll::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 0.1em #332e3c;
+          box-shadow: inset 0 0 0.1em #332e3c;
+  border-radius: 1em;
+}
+
+body .scroll::-webkit-scrollbar-thumb {
   background: #332e3c;
+  border-radius: 1em;
+}
+
+body .modalWindow {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(162, 149, 135, 0.6);
+}
+
+body .modalWindow .window {
+  width: 40em;
+  height: 50em;
+  margin: auto;
+  background: #846c5b;
+  margin-top: 1em;
+  border-radius: 5em;
+}
+
+body .modalWindow .window div {
+  padding: 1em;
+  text-align: center;
+  font-size: 2em;
+}
+
+body .modalWindow .window div form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body .modalWindow .window div form * {
+  width: 70%;
+  resize: none;
+  margin: auto;
+  margin-bottom: 1em;
+}
+
+body .modalWindow .window div form textarea {
+  height: 10em;
+}
+
+body .modalWindow .window div form [for="vimportant"] {
+  padding-top: 1em;
+  height: 3em;
+}
+
+body .modalWindow .window div form [for="vimportant"]:hover {
+  cursor: pointer;
+}
+
+body .modalWindow .window div form .selectPaintingBgrd {
+  background: url("select.png");
+  background-repeat: no-repeat;
+  background-size: 90%;
+}
+
+body .modalWindow .window div form :last-child {
+  color: #d8d4f2;
+  background: #332e3c;
+  border-radius: 10em;
+  font-size: 1em;
+  -webkit-box-shadow: 3px 3px 5px 5px #332e3c;
+          box-shadow: 3px 3px 5px 5px #332e3c;
+}
+
+body .modalWindow .window div form :last-child:hover {
+  cursor: pointer;
+}
+
+body .hide {
+  display: none;
 }
 /*# sourceMappingURL=style.css.map */
